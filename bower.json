@@ -1,0 +1,17 @@
+{
+  "name": "emojichat",
+  "homepage": "https://github.com/ehzdesign/emojichat",
+  "authors": [
+    "91.eahz@gmail.com"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
