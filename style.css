@@ -37,6 +37,11 @@ body{
   letter-spacing: .1em;
 }
 
+::-webkit-input-placeholder {
+   font-style: italic;
+   opacity: .8;
+}
+
 
 /*avatars section*/
 #avatars{
@@ -51,7 +56,8 @@ body{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: center;
 }
 
 #avatars .placeholder {
@@ -64,6 +70,7 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   border: 2px solid #6971de;
+  margin-right: 1em;
 }
 
 #avatars .future{
@@ -179,6 +186,9 @@ height: 50%;
   /*letter-spacing: .1em;*/
   -webkit-animation: animation 1000ms linear both;
   animation: animation 1000ms linear both;
+  -webkit-box-shadow: 0px 5px 25px -1px rgba(50, 50, 50, 0.5);
+-moz-box-shadow:    0px 5px 25px -1px rgba(50, 50, 50, 0.5);
+box-shadow:         0px 5px 25px -1px rgba(50, 50, 50, 0.5);
 
 }
 
