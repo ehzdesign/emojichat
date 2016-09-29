@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   var $messageOutput = $('.message-output');
 
-  var $mc = ('.messages-container')[0];
+
 
   //get message input element
   var $messageInput = $('input[name="input-message"]');
@@ -27,6 +27,8 @@ $(document).ready(function() {
     $messageInput.val('');
     $messageContainer.append(displayMessage());
     updateScroll();
+    //get timestamp
+    // console.log(moment().format('h:mm a'));
 
   });
 
@@ -43,7 +45,8 @@ $(document).ready(function() {
   function displayMessage(){
 
   var $copy =  $textBubble.clone().removeClass('template');
-    $copy.text(sentMessage);
+  $copy.text(sentMessage);
+  $copy.append('<div class="timestamp">' + moment().format('h:mm a') + '</div>');
     return $copy;
 
   }
@@ -55,6 +58,16 @@ $(document).ready(function() {
 
 }
 
+//on enter press send message
+$messageInput.keydown(function(e) {
+    if(e.keyCode === 13) {
+
+      sentMessage = $(this).val();
+      $messageInput.val('');
+      $messageContainer.append(displayMessage());
+      updateScroll();
+    }
+  });
 
 
 

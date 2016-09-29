@@ -182,6 +182,13 @@ height: 50%;
 
 }
 
+.timestamp{
+  display: block;
+    text-align: right;
+    font-size: 0.6em;
+    padding-top: 1em;
+}
+
 .sender{
     float: left;
       border-bottom-left-radius: 0px;
